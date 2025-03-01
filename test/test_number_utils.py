@@ -7,3 +7,23 @@ class PrimeListTest(unittest.TestCase):
         prime_list = [1, 2, 3]
         is_prime = is_prime_list(prime_list)
         self.assertTrue(is_prime)
+
+    def test_mixed_primes_and_non_primes(self):
+        prime_list = [1, 2, 4, 5]
+        is_prime = is_prime_list(prime_list)
+        self.assertFalse(is_prime)
+
+    def test_all_non_primes(self):
+        prime_list = [4, 6, 8, 9]
+        is_prime = is_prime_list(prime_list)
+        self.assertFalse(is_prime)
+
+    def test_empty_list(self):
+        prime_list = []
+        is_prime = is_prime_list(prime_list)
+        self.assertTrue(is_prime)
+
+    def test_large_prime(self):
+        prime_list = [9999991]
+        is_prime = is_prime_list(prime_list)
+        self.assertTrue(is_prime)
