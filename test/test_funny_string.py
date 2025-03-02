@@ -1,18 +1,18 @@
 import unittest
-from functions.funny_string import all
+from functions.funny_string import check_all
 
 
 class TestDataTestCases(unittest.TestCase):
     def test_list_4_4(self):
         user_lst = ["acxz", "bcxz"]
         if isinstance(user_lst, list):
-            result = all(user_lst)
+            result = check_all(user_lst)
         self.assertListEqual(result, ["Funny", "Not Funny"])
 
     def test_list_6_5(self):
         user_lst = ["ivvkxq", "ivvkx"]
         if isinstance(user_lst, list):
-            result = all(user_lst)
+            result = check_all(user_lst)
         self.assertListEqual(result, ["Not Funny", "Not Funny"])
 
     def test_list_36_5_18_54_98_27_20_33_77_11(self):
@@ -29,7 +29,7 @@ class TestDataTestCases(unittest.TestCase):
             "jkmsxzwrxzy",
         ]
         if isinstance(user_lst, list):
-            result = all(user_lst)
+            result = check_all(user_lst)
         self.assertListEqual(
             result,
             [
@@ -53,7 +53,7 @@ class TestDataTestCases(unittest.TestCase):
             "lxpilfipht",
         ]
         if isinstance(user_lst, list):
-            result = all(user_lst)
+            result = check_all(user_lst)
         self.assertListEqual(result, ["Not Funny", "Funny", "Funny"])
 
     def test_list_2359_79_12_777(self):
@@ -64,7 +64,7 @@ class TestDataTestCases(unittest.TestCase):
             "udemymvmeezexvvxmqipvmroitisbixubdqkccrrpcjmkvgfonpereeaeqpvqqyfahkebxqmeavrlryxmdayytvjscgxdxtwzxfexvbwvcbkilbqooslybcvzazuticajzttyeornxvbfwkwwsiveurigiggtlykuxwcvjxoighoofjisbzgcudhxlijatlromcnyfylvnzleqhsuyxkeedyrbgknwcmaqxwjlhlmcvlitigftzwnjhwuycbhxkisqimjfwjfgpopwgcdbatanamrowbtqrgijusmnrquttcpvtazdzefpmjsuedpgrluvxyaebolubwhmbiaryrjnyekzhujdfuruuzelhfyunaexcmunwysxlvzvjbqmqtvqqtngkixzbewxnsqnbtiiddfzlfsedqzihdpunbjxsxqlaymecnkihjjdcqeuqkuerwzwajxcbeqaqyahhvazpphfrqgfhdwdnpyxpdubkttrecnvvcmhpknasuobazukzfcffqyvhnneeaglzvisyszbxuwpvkpyfdtlgsatgksjklpapfmpxflpneyvpzaginylzjlinifookgejhjuyawtydvrxxtnsclixcckhfxvtdxvgvcfbkthxfwgrypdiszwnndakbarfkckvrmrwfvhwotpalxjadcmyinpukumhyacfzjpzwbhdzmzfkjatfdwgnegyowotjkjttvnlbdmwomobstdzifzpcoctkwrutrthzwfvssvldrnkyvptrfysiu",
         ]
         if isinstance(user_lst, list):
-            result = all(user_lst)
+            result = check_all(user_lst)
         self.assertListEqual(result, ["Not Funny", "Not Funny", "Funny", "Not Funny"])
 
     def test_list_956_70_12_1046_17(self):
@@ -76,7 +76,7 @@ class TestDataTestCases(unittest.TestCase):
             "mhhnhacylzpkeyldm",
         ]
         if isinstance(user_lst, list):
-            result = all(user_lst)
+            result = check_all(user_lst)
         self.assertListEqual(
             result, ["Not Funny", "Not Funny", "Funny", "Not Funny", "Not Funny"]
         )
@@ -84,7 +84,7 @@ class TestDataTestCases(unittest.TestCase):
     def test_list_26(self):
         user_lst = ["abcdefghijklmnopqrstuvwxyz"]
         if isinstance(user_lst, list):
-            result = all(user_lst)
+            result = check_all(user_lst)
         self.assertListEqual(result, ["Funny"])
 
     def test_list_91_2_7455_2025_12_6500(self):
@@ -97,7 +97,7 @@ class TestDataTestCases(unittest.TestCase):
             "naibxxdemtfliglvaetpafkpevkatzlbkfyqsugtlxvbvvfteqmedzbtmhakibvbriaieyeiwotlptcbtlqtriflgihymvlhuaphiofbssbrbuhzxuxohjekcwrarmadkfufmzdbwggzmkjcwendudszsszngelslaoelvlfvbyderptkhhkrlxyvfmcdipwfznchbnsekmfzdkxrwvnqfvmbxkbztmmqdbufclzhqnhibcclbauhrwmpvemxsjrpycckenxyrtqvuqfhbnxckemmcsckssfcruuczggshzhggqhczusugibxrgtgohtvkmidbbphroyoxhnteofcgcezevvsiacddrlrkjqwsjhhxdvqxmtjxutlvtmdxjmbloopyfzlqjhgxezgpmmbxuaahzebqqvyamjkaqjkfqisbqhtzemsdimpnktmyptciihtbablvqrysvomlmcyrcrtwhhyehwhlnbiqwwcjlovzfhhhdaavdietmnuwnjmguhybhvwjxaomcyorkbqbaifireksxefgbfykapwhwvlxdwpbscuoifpvszhnsmfzxhzitdavrbnpbhmhouukvvvboawdbiaiflfanqliofznwbttpbrwyjkbzavvcovwqluyyxbyuadbbgwerhgreltshihwmmflwqzeozvyenphdamcplsljhvcniwehmklilmrpfmbqmquxfunvcdnurqfsgntqcrgqaddwsdolhbzexiplynxnmmijfrpeicouecmzhuiybbywzaupqysiyigeoqealtkxgfljpckfpfhilveqobapyjwhotynkwhezjvlczsowwsncpbspbvysvdadzxdenjciphaibtsvpmaihdudlnsxeajrmtvivbzmqnxpnffmccvolqncnrjxutohbarcblkwjxirfxefezkydogltmpyzhpkmxqxgospifyuazuujfjnowqolddjuhagnjulmnlcrumudihvfdsymkyjwlifngzcevheqbsnvldeqtztcaqrbxgppopkkjuerxvocumfxqejnyfeuklextejyzmkcqxcpawtvhcoyirkuyxqqatexvzthdnydbjrjvandjrsuqykrskrofdpqwphekchpmovdfjvnbnkmmzxyhgbicnxxvztwnkdormegzuuhmhxksghmruvkgszsgwvkrgkixatwflapcudljlfxtiwrmfttfmicoevfrbdteaezfxkafiyzdqljyyhfgflqhowfzzwfwgdhagnsxaazrddsvwjsyyrzzolfohbgvitkbftjcdlbamlvbeknazzqjkohvvadoryugxqcyzvrpuqvlyubcasavkczozaevukzcceiksohxtzqthqsrmzngcdajpnzvvhsgwhdtlvkiedghadkmbyldkwxnlnbohnskqgpzrgovhjfflgylcybjxiguvhgcgsvrtpghznywhaippqjehmfvmadndpqdjfyfjnljpxovklpgtjkrgebdnmedyuqxtbczpjmleajcfkpvflqmbtlpnhodebrsasznxqlzojxzcbvwmmcnrtcfgywkirjisejoqdcbkkvlclpqmfrhibkknzxjwpgomcytpaditvoqdtxourlngnsfqnoxhsklqywwvjlbwlfxmhputhfibhhwfozkbwigsdjyrjldktkqjhqawhfwsdtfvcvinfruibbcvtzlmntlnjbqyrvdfqreyhyhghkbeklqgmmsjheveoozzuxwjgbctbdinhimjfpktialvmadnqewzmnkgvyxgbsshxknbieepbibgdyqnwfmldktkwkwvpkutgpsurdlrxxlvxkhjstfnzpskhlvhyhqldpmseamgpkgnmnbcnqgmxcjhqqwgxbukwvtavibttatynqmhwbtluesqetxttghwgdsqwmryoehwzcacrulwptsxyeargkmneubxsfwlustmjnqnbjzyisliphaahogaysvmvqxokchxftjdplyfpnqlrkwusgqsspspodfhscmqukefsxxlsjuiizolfdiktbuttkunuvaclqpywnwiimdpkbmczdcllptfheiumbhzvggykysknxsninbwwdvqlhzyynlnfjaggzshvysoyqpjzzhlnpznnvjxnlhvfpqvnvqpchwjqhjdypzvdnsanukqkitfaryruxcvrypbaofeoedhdfyyxsszmiatgumufmspsgreacszfjhrdjvmpnvwmeefhywghildmatflhxyeznjqwqcgttrgwlqrzterqyurgdzegtcqjoguffdhccsbtycyyvjpuuepdsgcnfzgoxzrxltmovhodejeuqluyrpmutnfokstersjjzcajlvpjnbgjlinomklunamxkusampsrejwhhafzeuokenvusdaxnjtwmtkildcgkarfjxycggujnhznaulvmrmjvthcaydoehexkdaqrvumsazohrxbwdiuusfdicniubjumoedbrxfviipbyuhqbwgcvngbrorywoccgfpqsfkiqtxmwayxshhrabktdcxgzfnvsawrqqkmaiizvhzxjdcpdnjqmtsdwpjfmhktdtpdgdqdppayxsbijxsnfckvyehntmzzaypzkpwbzgfkguzrcvopnbhapctqwtkixyavobshpzpsxwmkguwjleqseszojlbukrvrpchpbjlpqungrpnaglsowqdcvkokjugpvxjbisnvacxzbrtchffqzuquxcbjgzzzmibxmldzukczcdpswriuadkperngamfrbzkfspqlitsjcfhgohtgdagacfdwkyuezvaostpmenmjmsjhgdlucszkfapvezsjwxarcyrqmscedflmegtqudegmqobrfaerkdiviptajobpolpnlpnzoxjtolshghxohpdtbaycvbfhnfiafylpzujoyfcxfstmbqixrkhyokmbznopplsdfqqldrffqkbllhiuucsoslfykigcbftuclxgjugvqojsgpgcqjbpwcmqwobzgqirgesuajwkiokptifouvnzdpnxdjryrntmmfejherjtummejhsjvbwvnnltygfmrsccsyzuvjnklklvcmengtgbllflvftdeicqtyztyniwdnrluhzbdzgistnuknilzxxkoxipqbgzeyzbuaofzxslscedkjkjkwwcmqrsykcxxuvtplkomxvxkhhfiadqbzfmhwshrqtxbdlbkoumasietimcwhgptkxeiaujjttieqecopsqkmghujqsihsmcvjczfxauzhendaykxgmhboxhenvrkwjcpxztflviqiynmxedyaiukxuqyfxttuepcraoqcdsddfybwrxzbesqzvpsozyvnsyghlipddfmemdbeoncdprdfkekuzqohysiyafimhdyusgyauzjrbceksfoxjxashokjsbaalvihsyctxcqrhhpbtzhvjdmskpishkvpooyeubyenksnoxrwzjpebeyhxdhepuyxmelcbbbjqfszlbagmpbcavmkrwvvmrzyzxdygxoalbueocwpcofojofaxbfntrntkavcihukjjsxajccxhfxrymrbavlayxsmnfzktnnpynkgppdznuzryyytmnlguuofgevdbzopyyetlcxmybxcykivqleyyxzdpomjqlomesooslydcpspsobewmlsjwpbmengojmzannrjnnwgolaqvzsvhlwnvtnnpzlokyiqfikfsmjgloyvkphubykissfthphwiusbhirprjhixoelupocimbotrtzqlfiggpmezacitbwxormxmmyukhiaoycgaxaxejofmcqknlzcxsczkefnnzqvbwhgdlrznvztgamhmnucuyierapnijdghegapvdzbakpbfqnoyeqjihxiupmiwnyvjgwmpgputfajaliahxnhdpjmiqbhurdztitdvqhmrynhdpjlrojbfhaoihiashhjzzhtlzeqwgltndpfrkgvkabzjcxgguxbsdnbszvvchwukyzsuoradaqwmyfekgwnzckouqahlahiuwboclehjefyefmcialgywxrrunhmhveianmrrwkzhubhwuafbryazlacjhlndhasohprkckssrcqdrahvgmprwuvbfbnnkkdxontrnmnrfbisgxfmolrzxtyofrnzsyzhhsrdbetugpcohxbobvtlhutmrqnsajxevilciaogpkzimuzabaqwbsvsfjrslwnfysechuqhwzrglsixmpwrobjaxxzizyvrnvmxrgfyffqywbplzlqzbltvjsbinlheqbwsmstflbgruevlupveblprsvkbmrtawxcjieilzzjwlompnczhyvsnfdvmpjzqbaqcmcymqquolqbcvvahxjynkbvqvlifpspdsppblabbvpsvbhwaqmtgpnpnzmrhcykpzpjsgqcysikekqqbzbiwocvxqjnrunukasvtexpwymhzedzfvwipwnsnznfejbleeamtfpfubprfujjnaarykeuleodobfsfhktlqbsdkqynogwbasvsmhalyckpqiisxfkeqluwphbpryahovhhxpkvrgtxycappqoxrrreyyuimqvqsifrbraszezkhynshqgjzdtnmeuyritwsrgzlwlpyycbciuifcheuzodtxtjoxfjbaziegvfofaqjjzvuvdyxnjdkhhrdgxdspmztupvwazujmwklyodttvumxjpzqawhjauqaqjrbmmnywpieqfulxfgkpunegigmtehfytsgluwymwavmjkyroorplnpzktankttolkxewtvlcabqodunxbjfwekzidedztgcogashdwcgylmjitvxzkrxoxcykvmlyzfiptscdekhmauvjkjtjtekrzwlewfnfhtteauxgaozaykgvbwzmgzacgmcqpftphjzxugbcmghzqyzsfzctjcuewapzozzlxzdkwuswvzflmhpvdxucivkhcsqlxqtpafglwgksocdlujalqhdfhgrgkrughxqjzpdgitwnwyhqkuqkrqqgdytwgftundcpfiungofeyasvlcjteibpbfundvofklrbqfyecoteibxpcfkmzbnensbktesxkksyqjlnzmhmyjdeqxyecoqsrjeucsvmqeqxjxsqavxvavnydvruzuthsthlqmjryikusirnjzlkqitfnqjfmslxnoyxewngujrjrhgtlfdwxramtxhhlbflsrtiqjrszcxhrjfbvcfpdlsbpgufkxoszixaciakxffilyjkihoytjmdajmgowgwbvcobwaobdmcbatitisryhujgurkltimpvnlqpltzgifhxtmchwchpbwsbyuliqpwhebmvqczpwcgcsinietsaqngytrrqbhaxitkwxqisxyapmqmrzaahjryigdjjktayyneunqxyvpmntdgkuyqmdoqwdtqsjalvqpwarixxsanoglfhzjiovkksbkenllvqyskbuddsexiibnjrqurjqegnednfmtnwoksixyudobrilgcowqoldphytrixkxuxkelwkshsrglzuqwsdidnbrlwugszpzjmudvdibldssvogzfdadlloryoidzlzefqpigrcdgpcvnhrpqfhrwwvrdfvffrlsewqadobthrpehhvsdyfqeujbdlxqgikptffaurcyfclhmftoglrskraasihiorrdkuycklvsyftablacstxxzmckkankghecwoewmlemiyftssfmhaubbsksiagynpmandmemjhuydqodxpegdyqmgaspbprmhmlnocflvmabfydpquhgaclbntbhilbtqqwvibdqrfnpzjgonbgllhijmggsmyrccheehxixepevndcmwlifavkxkjitegcvomifmhpyptwodrmogsjkoznrukhsmownicvptzoazwcaizloubdmpruxhjihgomttuflvxugrcvaershcxxkzgowwwknjrvsbycmqafchzpuaxzcpaqmfknsrfpypiipalimhyzswnnhdtaalhnzwfapkajtnesblqzwipzibyzveawoodnimjurbsblilyfniablmuuowwjobezgbafspzlfwyfxvqjqyltevaslorlsxmbvtdemspmixesglwcgmoerdyrepbkaqcvgumrqojctaqxfflmgophigeyrjpvlyfzshcsgynwqykiygqzozwejqnyotmrwuwmyelyozcoqdeqbvmsbuskepgdfqfzvybnwubkdlmmgltlxabxcmwmbktgyszjwejopjipaocnttizwamrmxvoienntbrpwgjuzbeufrbdwdeexguiifryiwlxmnshdtqnxvrrspxaqqpxahwyovpzrtxhhmiedfozscwscjgwinyvsxwavxjlrggtjkxpv",
         ]
         if isinstance(user_lst, list):
-            result = all(user_lst)
+            result = check_all(user_lst)
         self.assertListEqual(
             result,
             ["Not Funny", "Funny", "Not Funny", "Not Funny", "Funny", "Not Funny"],
@@ -116,7 +116,7 @@ class TestDataTestCases(unittest.TestCase):
             "qtxpdxqpzqxrtkbnfgwemopzyfhbgggzbtqzziqgvgrvvbjodwhlitdgovlgzqptwiznsalyffyqjkjsqghbywcqxjcczztggiqzyitsngxarqgpoxmajigdethsxzjcwjjoywnmuuouxhjppjnhsyrhuljthobpsilzpepyofzxmwmenzvdbrwhnagfwlkxuglernlxhhuijoeohnobltbnsiexgzksbhwildwqebihlmojlhavmgxflhhurqgchwgywuldjcdgbdistzfkpracquuccjfpbmsletrdfwisfvskvfzzlrgaxnzleknqzvkotqlmhhtxxlqdubzumkizhsfpugfskzhsmirmzgwxppyprlcffjhzoxqhsxitfbfdigqvhmthulshhrwtotaoklvrzxfddmgwgmtfkufpiagvplafhhjjkdxuhrtslnzbesmpgwmumbcwzygggonfgpvjbuloxajhdunrtvphbwromvcevbizdecpepyconezvqwtrymfjwfcqxyfpoxxugzuoaybdcpefvztipojlmuizwsubpwudlcblevnboqxjdpletvghwasmvivvuhonhhrllfeatfoqdbyjvozshnjfroxlejnbvtdbnjkzcrumhcmaahztissytpgijdjbnyxyjhanzpazwhfsyditgefiuwxjesrjndvsbxqfvuatddwiybrdhishwrxknxxvuhmrqbripnydfeouejbkpoydpomjxztlinwictiitjgajebsxkowzhgklwluqzkfiilvdubvltvzomivjelqlbzpqfwbnwrduzjfnzocsvayxsidpmznioeahhwvteklbifzjzrokpyhvnktgifghiryyifmotyvcmcaossnycfbyxoiexrjtuynfuicleqgcafbkvhxpikhscvnghcdsficsoggvqyinkttastdemjhwouhpkzrillwgnuexpfhkmqikoaoarseovlmqmfswqfhfwxmzgxclzczquxqehvniwgzhajzogmieekbsdvkdwbihlashfstggaqbaybwqrwmlhmyyqqzdobqwkpmfuslsnhczngmdmtzfphizgivzvagzqnnvtxlumjaiykmuzjbwasbbgguhymbxymzxkiarklmgfixaywzcllnmgjszpurqqreikohljttelvnhsudajpfsvthjbswighyvhsxouxpmwdewrwaxtatkbrelbpgbycgudakjfkwfmvqhozwrassyjjzmyhvbqiciybllhgxeldgigjvrnjqfwzqrhgdnbwdvjiaaottpbwrfjyrgqslwuysxfwikqgadrfsrimpdqocjnjjwjqhpvuxwzmbviikbwnyvxxpzpumhxfobvzzorgskebpdyioqkhafnhrxcwrmkbgsnvxtnjamrskgqkdqcpmnquutrtfiooctnlknvctalxuqzylnttpkhhgdhonsoobqurkhlgxtvwuhvvzzddryfckdqavdfchdmaurjhydzwfyohjikagzcuwdgjtycbperyzrloywdswvfrresclzhpowrvhqomdjnnaslpwbetmsszwgehrihfewbvyxyzapgztxkdccrusimirpvzxawcfrezgwxffkzfjeavnyiyadhlsqfqofisuoaqfgnibiotcslhynlrohqmsmxrifrvirqwmflwwkbfrnxvqqtnqzatrmvnjkriapwkqcekngdrzmftdcexexxeknlrjtuipacvkevtdfmwwryebijakvmfjiirabzkdireedxjwqqzystnhwvqhhycfybetvqoafucvsqkcjpovahzzwrmxweuqqbyvrkzetnuyczxuvzfaswgthznbkfaxrjiuediooglmkudifzvjcxcmbtcovzlbvippcyyljlryespxghfufpqddfvwwssztefzufcjnidordtmzszwrmfewarvavzmwnydvnhnbtcqmdbmptlbpxcnrjhbtlojpnnunxxodhgmcwnytidwpzxqoohwuvdjapyoyvstxyqrirfnhyumavlqedylkrnahxtqtdfcrdgrppqtzmmhcwtaukkciuiaimppwtwqvghjwjmnmqeyngpvbvcmjloaqmlczzjueffbxozrohlyoaejehnbrmrafpazasarfkhudkrcvvtekqyazgiezokewdvsprrnqdpxxqpkuiepszqqmmpsndyfjggzekqewuodohjcrhttaqgnfgjjygwibakkufxkosbpeypvwvqwdxgcgdgdxzimhljkltflseiknmifyetfwxysmzzdlhscyvaycsnbsizryyonnszqaxmneusikfmyqfjzwiexljectyaxhmtyajalkrngiuqolwtruiiukhjdlwnzbtluspisityygchpbveztukupjdtcugsfvaxbzbqicyqpmbknsalglvtpjazojpxllpmzxuctpmggiurgthgrtslpfyxqfevvimkkwsluvh",
         ]
         if isinstance(user_lst, list):
-            result = all(user_lst)
+            result = check_all(user_lst)
         self.assertListEqual(
             result,
             [
@@ -143,7 +143,7 @@ class TestDataTestCases(unittest.TestCase):
             "airlblriq",
         ]
         if isinstance(user_lst, list):
-            result = all(user_lst)
+            result = check_all(user_lst)
         self.assertListEqual(
             result,
             ["Not Funny", "Not Funny", "Funny", "Not Funny", "Funny", "Funny", "Funny"],
@@ -161,7 +161,7 @@ class TestDataTestCases(unittest.TestCase):
             "tdnjwwmlayzrdaxlklzzhdmvlhotgukyrquwcuuucxjktgecpqplrsfdklakmbommgwnexguldcuozpfftpxvsqollzilmochhywsoeadwrqlwajyxkxrbknudthkotqcmvmhznnwzpcxipydbteucfxntinceabuuqtafvgktukfvvqjvmfezvzsdkiwqhovnjalcksbnlubscwxxiiigbuyrpllhlvggqgscvmtvmecvodmzmhswjylqogorjnpknzfofvmujdrtdcieqfwdacnziipwpjepifekpkycbhonmijhvlykjukfjqhqqtgqpjlvdenzymdiikxuxruacatqpcacevvixexwmxkzhwpntjrcrielbtrjlcbgocihhxwewbkppvcgnfyfyysrcjjihbcynlvxxbnfwtamsvkpekimqargegcclmkdkseahmxbshmkbfcoiybjtibovskvuwtsbftvxokaomxkzowghmdrbdkwinrtpkgvoqqnymbbeanvhbmxkdxvcsqrqdybnxgdrplgzkrrmsiucoeefqhprtaackecxmshkyyvobmvhkrwkpqpwcnqojxwuguoghykmxznnndaymxonaxekchpstezqiruefegismsohzstvmbddqrrevfhwoivglyseoatpdssuxhpkubbyadyqrowymeqxmfvwhdigrefqhlrqpejurnpalxanmulwtvhwaclqicddmxnaxisuxfihpmjfhgrkgqfgzalidjemtyaaejkcgcevaazoz",
         ]
         if isinstance(user_lst, list):
-            result = all(user_lst)
+            result = check_all(user_lst)
         self.assertListEqual(
             result,
             [
